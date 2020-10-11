@@ -24,7 +24,7 @@ public class Lagrange extends Polynomial {
                 try {
                     fundamentalPolynomial.timesAssign(temp.divAssign(x - key));
                 } catch (Exception ex) {
-                    temp = new Polynomial();
+                    temp = new Polynomial(2);
                 }
             }
         }
