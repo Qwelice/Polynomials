@@ -3,18 +3,19 @@ package polynomials;
 import polynomials.pairs.Pairs;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class Newton extends Polynomial {
-    private HashMap<Double, Double> dots;
-    private HashMap<Pairs, Double> p_difference;
+    private LinkedHashMap<Double, Double> dots;
+    private LinkedHashMap<Pairs, Double> p_difference;
     private Polynomial cash_for_elems;
     private Double[] keys;
 
     public Newton(HashMap<Double, Double> dots) {
-        p_difference = new HashMap<>();
+        p_difference = new LinkedHashMap<>();
         keys = new Double[0];
         cash_for_elems = new Polynomial(new double[]{1.});
-        this.dots = (HashMap<Double, Double>) dots.clone();
+        this.dots = (LinkedHashMap<Double, Double>) dots.clone();
         keys = this.dots.keySet().toArray(keys);
         createPolynomial();
     }
