@@ -11,7 +11,7 @@ public class Newton extends Polynomial {
     private Polynomial cash_for_elems;
     private Double[] keys;
 
-    public Newton(HashMap<Double, Double> dots) {
+    public Newton(LinkedHashMap<Double, Double> dots) {
         p_difference = new LinkedHashMap<>();
         keys = new Double[0];
         cash_for_elems = new Polynomial(new double[]{1.});
